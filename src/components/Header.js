@@ -9,7 +9,7 @@ const Header = () => {
       <Link to={"/"}>
         <span>
           {" "}
-          Filmy<span className="text-white">Verse</span>
+          Shaw<span className="text-white">Verse</span>
         </span>
       </Link>
 

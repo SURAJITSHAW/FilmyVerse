@@ -42,6 +42,7 @@ const AddMovie = () => {
                     Title
                   </label>
                   <input
+                    required
                     value={form.title}
                     onChange={(e) =>
                       setForm({ ...form, title: e.target.value })
@@ -60,6 +61,7 @@ const AddMovie = () => {
                     Year
                   </label>
                   <input
+                    required
                     value={form.year}
                     onChange={(e) => setForm({ ...form, year: e.target.value })}
                     type="number"
@@ -73,13 +75,11 @@ const AddMovie = () => {
 
               <div class="p-2 w-full">
                 <div class="relative">
-                  <label
-                    for="image"
-                    class="leading-7 text-sm text-gray-200"
-                  >
+                  <label for="image" class="leading-7 text-sm text-gray-200">
                     Image URL
                   </label>
                   <input
+                    required
                     value={form.image}
                     onChange={(e) =>
                       setForm({ ...form, image: e.target.value })
@@ -111,11 +111,13 @@ const AddMovie = () => {
                 </div>
               </div>
               <div class="p-2 w-full">
-                <button onClick={addMovie} class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-700 rounded text-lg">
-                  {loading ? <TailSpin height={25} color="white"/> : "Submit"}
+                <button
+                  onClick={addMovie}
+                  class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-700 rounded text-lg"
+                >
+                  {loading ? <TailSpin height={25} color="white" /> : "Submit"}
                 </button>
               </div>
-
             </div>
           </div>
         </div>
