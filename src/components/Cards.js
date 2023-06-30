@@ -54,7 +54,7 @@ const Cards = () => {
   ]);
 
   return (
-    <div className="flex flex-wrap justify-between p-3 mt-2">
+    <div className="flex flex-wrap justify-around p-3 mt-2">
 
       {data.map((card, id) => {
         return (
